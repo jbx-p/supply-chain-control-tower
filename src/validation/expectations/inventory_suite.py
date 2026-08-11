@@ -1,14 +1,12 @@
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from gx_setup import get_context
+from gx_setup import get_context, get_or_add_table_asset
 
 
 def build_inventory_suite():
     context, datasource = get_context()
-    asset = datasource.add_table_asset(
-        name="inventory_snapshots", table_name="inventory_snapshots"
-    )
+    asset = get_or_add_table_asset(datasource, "inventory_snapshots")
     batch_request = asset.build_batch_request()
 
     suite_name = "inventory_suite"
@@ -32,8 +30,7 @@ def build_inventory_suite():
 
     # Soft expectation: matches the generation window from Phase 1
     validator.expect_column_values_to_be_between(
-        "snapshot_date", min_value="2024-01-01", max_value="2025-12-31"
-    )
+    "snapshot_date", min_value="2024-01-01 00:00:00", max_value="2025-12-31 23:59:59")
 
     validator.save_expectation_suite(discard_failed_expectations=False)
     return suite_name

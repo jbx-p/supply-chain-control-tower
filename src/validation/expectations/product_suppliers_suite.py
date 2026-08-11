@@ -1,14 +1,12 @@
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from gx_setup import get_context
+from gx_setup import get_context, get_or_add_table_asset
 
 
 def build_product_suppliers_suite():
     context, datasource = get_context()
-    asset = datasource.add_table_asset(
-        name="product_suppliers", table_name="product_suppliers"
-    )
+    asset = get_or_add_table_asset(datasource, "product_suppliers")
     batch_request = asset.build_batch_request()
 
     suite_name = "product_suppliers_suite"

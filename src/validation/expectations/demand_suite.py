@@ -1,12 +1,12 @@
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from gx_setup import get_context
+from gx_setup import get_context, get_or_add_table_asset
 
 
 def build_demand_suite():
     context, datasource = get_context()
-    asset = datasource.add_table_asset(name="demand_history", table_name="demand_history")
+    asset = get_or_add_table_asset(datasource, "demand_history")
     batch_request = asset.build_batch_request()
 
     suite_name = "demand_suite"
@@ -25,8 +25,7 @@ def build_demand_suite():
     # Soft expectation: matches the generation window from Phase 1 —
     # update this if you regenerate with a different date range
     validator.expect_column_values_to_be_between(
-        "date", min_value="2024-01-01", max_value="2025-12-31"
-    )
+    "date", min_value="2024-01-01 00:00:00", max_value="2025-12-31 23:59:59")
 
     # No duplicate (date, product_id) pairs — each product should have
     # exactly one demand row per day
