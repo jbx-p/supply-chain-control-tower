@@ -5,7 +5,7 @@ inventory/network optimization, disruption simulation, and GenAI-generated
 executive briefings — built end-to-end in Python.
 
 ## Status
-🚧 In progress — Phase 4 (supplier risk scoring) complete.
+🚧 In progress — Phase 5 (network & inventory optimization) complete.
 
 ## Progress
 - ✅ Phase 0 — Environment & Foundation Setup
@@ -13,7 +13,7 @@ executive briefings — built end-to-end in Python.
 - ✅ Phase 2 — Automated Data Quality & Validation Pipeline
 - ✅ Phase 3 — Demand Sensing & Forecasting Engine (Prophet + SARIMA, mean MAPE 13.34%)
 - ✅ Phase 4 — Supplier Risk Scoring Model (GBM classifier, 0–100 risk scores)
-- ⬜ Phase 5 — Network & Inventory Optimization
+- ✅ Phase 5 — Network & Inventory Optimization Engine (PuLP LP, risk-adjusted safety stock)
 - ⬜ Phase 6 — Disruption Simulation Engine
 - ⬜ Phase 7 — GenAI Executive Briefing Generator
 - ⬜ Phase 8 — Streamlit Interactive Control Tower App

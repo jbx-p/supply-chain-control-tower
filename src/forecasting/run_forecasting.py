@@ -18,7 +18,7 @@ from sarima_forecaster import fit_sarima_model, forecast_sarima
 from cross_validation import rolling_origin_cv
 
 
-def run_full_pipeline(forecast_horizon=30):
+def run_full_pipeline(forecast_horizon=60):
     product_ids = get_all_product_ids()
     print(f"Running forecasting pipeline for {len(product_ids)} products...\n")
 
