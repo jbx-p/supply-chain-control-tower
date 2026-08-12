@@ -1,0 +1,12 @@
+supplier_id,order_month,risk_score,risk_tier,name,country,reliability_base
+S009,2025-12,87.3,High,Munoz-Roman,Saint Lucia,0.861
+S011,2025-12,82.9,High,Arnold Ltd,Niger,0.808
+S007,2025-12,48.4,Medium,Peterson-Moore,Serbia,0.817
+S010,2025-12,35.8,Medium,Herrera-Dudley,Honduras,0.835
+S004,2025-12,11.0,Low,"Guzman, Hoffman and Baldwin",Reunion,0.92
+S006,2025-12,9.4,Low,Blake and Sons,Qatar,0.902
+S002,2025-12,8.8,Low,"Garcia, Yang and Gardner",Nauru,0.938
+S005,2025-12,3.3,Low,"Barnes, Cole and Ramirez",Trinidad and Tobago,0.92
+S012,2025-12,3.1,Low,Ray-Bush,Aruba,0.912
+S001,2025-12,2.0,Low,"Rodriguez, Figueroa and Sanchez",Burundi,0.845
+S008,2025-12,2.0,Low,Garcia-James,Guinea-Bissau,0.959

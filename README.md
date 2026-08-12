@@ -4,8 +4,11 @@ An AI-powered supply chain control tower: demand sensing, supplier risk scoring,
 inventory/network optimization, disruption simulation, and GenAI-generated
 executive briefings — built end-to-end in Python.
 
+## Live Dashboard
+📊 [View the interactive Tableau dashboard](https://public.tableau.com/app/profile/joel.bumba1631/viz/SupplyChainControlTower/Dashboard1)
+
 ## Status
-🚧 In progress — Phase 8 (Streamlit interactive control tower app) complete.
+🚧 In progress — Phase 9 (Tableau Public dashboard) complete.
 
 ## Progress
 - ✅ Phase 0 — Environment & Foundation Setup
@@ -17,7 +20,7 @@ executive briefings — built end-to-end in Python.
 - ✅ Phase 6 — Disruption Simulation Engine (simpy Monte Carlo, risk-correlation r=0.46)
 - ✅ Phase 7 — GenAI Executive Briefing Generator (OpenRouter / Claude Sonnet 4.5)
 - ✅ Phase 8 — Streamlit Interactive Control Tower App (6 pages: Home, Demand Forecast, Supplier Risk, Inventory Optimization, Disruption Simulation, Executive Briefing)
-- ⬜ Phase 9 — Tableau Public Executive Dashboard
+- ✅ Phase 9 — Tableau Public Executive Dashboard (published)
 - ⬜ Phase 10 — Testing, Documentation & Portfolio Packaging
 
 ## Regenerating and validating the data
