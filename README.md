@@ -1,46 +1,95 @@
 # Global Supply Chain Control Tower
 
-An AI-powered supply chain control tower: demand sensing, supplier risk scoring,
-inventory/network optimization, disruption simulation, and GenAI-generated
-executive briefings — built end-to-end in Python.
+An end-to-end, AI-powered supply chain control tower: demand forecasting, supplier risk
+scoring, inventory optimization, disruption simulation, and GenAI-generated executive
+briefings — built entirely in Python, with both an interactive Streamlit app and a
+published Tableau dashboard.
 
-## Live Dashboard
-📊 [View the interactive Tableau dashboard](https://public.tableau.com/app/profile/joel.bumba1631/viz/SupplyChainControlTower/Dashboard1)
+📊 **[Live Tableau Dashboard](https://public.tableau.com/app/profile/joel.bumba1631/viz/SupplyChainControlTower/Dashboard1)**
 
-## Status
-🚧 In progress — Phase 9 (Tableau Public dashboard) complete.
+## The problem
+[2-3 sentences: what business problem does this solve, framed the way you'd explain it
+in an interview — e.g., "Supply chain teams often react to disruptions after they've
+already hurt service levels. This project builds a system that forecasts demand,
+quantifies supplier risk from real delivery behavior, and translates both into
+concrete, cost-justified inventory decisions — before problems happen, not after."]
 
-## Progress
-- ✅ Phase 0 — Environment & Foundation Setup
-- ✅ Phase 1 — Data Architecture & Synthetic Dataset Generation
-- ✅ Phase 2 — Automated Data Quality & Validation Pipeline
-- ✅ Phase 3 — Demand Sensing & Forecasting Engine (Prophet + SARIMA, mean MAPE 13.34%)
-- ✅ Phase 4 — Supplier Risk Scoring Model (GBM classifier, 0–100 risk scores)
-- ✅ Phase 5 — Network & Inventory Optimization Engine (PuLP LP, risk-adjusted safety stock)
-- ✅ Phase 6 — Disruption Simulation Engine (simpy Monte Carlo, risk-correlation r=0.46)
-- ✅ Phase 7 — GenAI Executive Briefing Generator (OpenRouter / Claude Sonnet 4.5)
-- ✅ Phase 8 — Streamlit Interactive Control Tower App (6 pages: Home, Demand Forecast, Supplier Risk, Inventory Optimization, Disruption Simulation, Executive Briefing)
-- ✅ Phase 9 — Tableau Public Executive Dashboard (published)
-- ⬜ Phase 10 — Testing, Documentation & Portfolio Packaging
+## What it does
+1. **Generates realistic synthetic data** — 40 products, 12 suppliers, 2 years of daily
+   demand with category-specific seasonality and deliberately injected supplier disruptions
+2. **Validates data quality automatically** — 7 `great_expectations` suites + referential
+   integrity checks, one command to verify the whole dataset
+3. **Forecasts demand per-SKU** — Prophet + SARIMA benchmark, validated with rolling-origin
+   cross-validation (13.34% mean MAPE across 40 products)
+4. **Scores supplier risk** — a Gradient Boosting classifier predicting next-month risk
+   from real delivery behavior (79% accuracy, 0.816 ROC-AUC)
+5. **Optimizes inventory decisions** — a PuLP linear program balancing holding, stockout,
+   and ordering costs, with risk-adjusted safety stock
+6. **Stress-tests the policy** — a `simpy` Monte Carlo simulation (2,400 trials) confirming
+   the optimized policy's benefit concentrates exactly where Phase 4's risk scores predict
+   it should (r=0.46 correlation)
+7. **Generates executive briefings** — an LLM (via OpenRouter/Claude) synthesizes results
+   from every phase into a grounded, plain-language weekly summary
+8. **Presents everything two ways** — a 6-page interactive Streamlit app, and a published
+   Tableau Public dashboard
 
-## Regenerating and validating the data
+## Key results
+| Metric | Result |
+|---|---|
+| Forecast accuracy | 13.34% mean MAPE across 40 products |
+| Risk model accuracy | 79% accuracy, 0.816 ROC-AUC |
+| Optimized vs. naive cost | +15.3% (the quantified cost of risk-adjusted resilience) |
+| Simulated resilience benefit | r=0.46 correlation between supplier risk and service-level improvement |
+
+## Architecture
+[Insert a simple diagram here — see Step 3]
+
+## Tech stack
+Python · pandas/numpy · SQLAlchemy/SQLite · great_expectations · Prophet · statsmodels ·
+scikit-learn · PuLP · simpy · Anthropic Claude (via OpenRouter) · Streamlit · Tableau
+
+## Project structure
+
+## Running it
+
+**Set up:**
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+**Generate and validate data:**
 ```powershell
 python src/data_generation/generate_data.py
 python src/validation/run_validation.py
 ```
 
-## Running the forecasting pipeline
+**Run the full pipeline:**
 ```powershell
 python src/forecasting/run_forecasting.py
-python src/forecasting/sanity_check.py
-```
-
-## Running the risk scoring pipeline
-```powershell
 python src/risk_scoring/train_model.py
 python src/risk_scoring/score_suppliers.py
+python src/optimization/run_optimization.py
+python src/simulation/run_simulation.py
+python src/genai/generate_briefing.py
 ```
-## Running the interactive app
+
+**Launch the interactive app:**
 ```powershell
 streamlit run src/app/Home.py
 ```
+
+**Run tests:**
+```powershell
+pytest tests/ -v
+```
+
+## Methodology write-ups
+Every phase has a detailed methodology doc under `docs/`, including honest discussion of
+real bugs found and fixed along the way (an unfair naive baseline, a forecast-horizon/
+lead-time mismatch, a lead-time leak between simulated policies, a risk-tier color bug) —
+these are linked from each phase's section above, or browse `docs/` directly.
+
+## Author
+Joel Bumba — [LinkedIn](your-link) · [GitHub](https://github.com/jbx-p)
