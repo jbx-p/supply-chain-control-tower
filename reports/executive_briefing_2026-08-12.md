@@ -3,16 +3,16 @@
 # Weekly Supply Chain Executive Briefing
 
 ## Headline
-Apparel demand is surging 20% while electronics decline sharply, but two high-risk suppliers (Munoz-Roman and Arnold Ltd) require immediate attention.
+Apparel demand is surging 20% while electronics decline sharply; two high-risk suppliers require immediate attention.
 
 ## Demand Outlook
-Apparel products P005, P026, and P033 are growing 19-20%, while electronics products P025, P021, and P001 are declining 20-22%. Our forecast accuracy is solid at 13.5% error, giving us reasonable confidence to adjust production and inventory plans accordingly.
+Three apparel products (P005, P026, P033) are each growing near 20%, while electronics are down 20%+ across our top declining items (P025, P021, P001). Our forecast accuracy remains solid at 13.5% error, giving reasonable confidence for planning shifts between categories.
 
 ## Supplier Risk Alerts
-Munoz-Roman (Saint Lucia, risk score 87.3) and Arnold Ltd (Niger, risk score 82.9) are both high-risk and need contingency plans—consider dual-sourcing or building buffer stock for products they supply. Peterson-Moore (Serbia) and Herrera-Dudley (Honduras) are medium-risk but stable enough to monitor without immediate action.
+**Munoz-Roman (Saint Lucia)** and **Arnold Ltd (Niger)** are flagged high-risk with scores of 87 and 83 respectively. We should dual-source critical components from these suppliers or build safety stock now—disruptions here would hit production immediately.
 
 ## Inventory & Cost
-The optimized inventory policy costs $7.2M versus $6.3M for our current approach—a 15.3% increase ($956K more). This isn't waste: we're paying for resilience. The higher cost buys us better service levels during disruptions, particularly for high-demand apparel products.
+The optimized inventory policy costs **15.3% more** ($7.2M vs $6.3M), but this isn't waste—it's buying protection. That extra $956K funds strategic buffers that prevent stockouts when suppliers fail or demand spikes unexpectedly.
 
 ## Resilience Check
-Disruption simulations show the optimized policy maintains 92.2% service levels versus 92.0% under current practices—a modest gain overall, but products P015, P009, and P005 see meaningful protection (up to 2.7 percentage points better). Given the volatile supplier landscape and demand shifts, this stability is worth the premium.
+Under disruption simulation, the optimized policy maintains 92.2% service level versus 92.0% with current approach. The gap is modest overall, but products P015, P009, and P005 see meaningful resilience gains of 2-3 percentage points—critical given P005 is one of our fastest-growing items. The system holds up reasonably well, though exposure to those two high-risk suppliers remains our biggest vulnerability.
