@@ -1,3 +1,11 @@
+"""
+check_risk_correlation.py
+Correlates supplier risk score against Phase 6's simulated service-level
+improvement (optimized vs naive policy) — confirms whether the
+risk-adjusted safety stock policy's benefit concentrates on
+higher-risk suppliers, as designed. Result: r ≈ 0.46.
+"""
+
 import sys, os
 sys.path.append(os.path.join("..", "data_generation"))
 from db import engine
