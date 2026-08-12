@@ -5,7 +5,7 @@ inventory/network optimization, disruption simulation, and GenAI-generated
 executive briefings — built end-to-end in Python.
 
 ## Status
-🚧 In progress — Phase 6 (disruption simulation) complete.
+🚧 In progress — Phase 7 (GenAI executive briefing) complete.
 
 ## Progress
 - ✅ Phase 0 — Environment & Foundation Setup
@@ -15,7 +15,7 @@ executive briefings — built end-to-end in Python.
 - ✅ Phase 4 — Supplier Risk Scoring Model (GBM classifier, 0–100 risk scores)
 - ✅ Phase 5 — Network & Inventory Optimization Engine (PuLP LP, risk-adjusted safety stock)
 - ✅ Phase 6 — Disruption Simulation Engine (simpy Monte Carlo, risk-correlation r=0.46)
-- ⬜ Phase 7 — GenAI Executive Briefing Generator
+- ✅ Phase 7 — GenAI Executive Briefing Generator (OpenRouter / Claude Sonnet 4.5)
 - ⬜ Phase 8 — Streamlit Interactive Control Tower App
 - ⬜ Phase 9 — Tableau Public Executive Dashboard
 - ⬜ Phase 10 — Testing, Documentation & Portfolio Packaging
