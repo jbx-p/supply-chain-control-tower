@@ -8,11 +8,10 @@ published Tableau dashboard.
 📊 **[Live Tableau Dashboard](https://public.tableau.com/app/profile/joel.bumba1631/viz/SupplyChainControlTower/Dashboard1)**
 
 ## The problem
-[2-3 sentences: what business problem does this solve, framed the way you'd explain it
-in an interview — e.g., "Supply chain teams often react to disruptions after they've
-already hurt service levels. This project builds a system that forecasts demand,
-quantifies supplier risk from real delivery behavior, and translates both into
-concrete, cost-justified inventory decisions — before problems happen, not after."]
+Supply chain teams often find out a supplier is unreliable after a shipment is already
+late. This project builds a system that forecasts demand, quantifies supplier risk from
+real delivery behavior, and translates both into concrete, cost-justified inventory
+decisions — before problems happen, not after.
 
 ## What it does
 1. **Generates realistic synthetic data** — 40 products, 12 suppliers, 2 years of daily
